@@ -14,9 +14,28 @@ transactions = [
 ]
 
 def calculate_balance():
-    customer_id = input("Please enter customer ID: ")
-    if customer_id not in customers_and_balances or customer_id is not int:
-        print("Please enter a valid customer id")
+    
+    # Figure out how to return to the input selection if either of the following checks are not met
+    try:
+        customer_id = int(input("Please enter customer ID: "))
+    except ValueError:
+        print("Please enter a valid customer ID")
+        return
+    
+    if customer_id not in customers_and_balances:
+        print("Customer ID not found")
+        return
+
+    customer_balance = customers_and_balances[customer_id]
+    
+    # Calculate transactions for selected customer id
+    for transaction in transactions:
+        if "customer_id" == customer_id:
+            if "type" == "deposit":
+                balance = customer_balance += "amount"
+            else if "type" == "withdrawal":
+                balance = customer_balance -= "amount"
+    print(f"Customer {customer_id} has a remaining balance of: {balance}")
 
 calculate_balance()
     
