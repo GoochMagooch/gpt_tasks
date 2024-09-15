@@ -1,4 +1,4 @@
-balances = [{1: 10000}, {2: 7500}, {3: 15000}]
+customers_and_balances = [{1: 10000}, {2: 7500}, {3: 15000}]
 
 transactions = [
     {"customer_id": 1, "type": "deposit", "amount": 500},
@@ -13,3 +13,10 @@ transactions = [
     {"customer_id": 1, "type": "withdrawal", "amount": 200}
 ]
 
+def calculate_balance():
+    customer_id = input("Please enter customer ID: ")
+    if customer_id not in customers_and_balances or customer_id is not int:
+        print("Please enter a valid customer id")
+
+calculate_balance()
+    
