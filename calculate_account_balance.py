@@ -1,4 +1,4 @@
-customers_and_balances = [{1: 10000}, {2: 7500}, {3: 15000}]
+customers_and_balances = {1: 10000, 2: 7500, 3: 15000}
 
 transactions = [
     {"customer_id": 1, "type": "deposit", "amount": 500},
