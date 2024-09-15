@@ -32,10 +32,10 @@ def calculate_balance():
     for transaction in transactions:
         if "customer_id" == customer_id:
             if "type" == "deposit":
-                balance = customer_balance += "amount"
+                customer_balance += "amount"
             else if "type" == "withdrawal":
-                balance = customer_balance -= "amount"
-    print(f"Customer {customer_id} has a remaining balance of: {balance}")
+                customer_balance -= "amount"
+    print(f"Customer {customer_id} has a remaining balance of: {customer_balance}")
 
 calculate_balance()
     
