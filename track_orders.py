@@ -11,4 +11,26 @@ orders = [
     {"customer": "Jack", "items": ["Sushi", "Miso Soup"], "total": 30.00}
     ]
 
+def summarize_orders(orders):
+    total_orders = 0
+    for order in orders:
+        total_orders += 1
+    return total_orders
 
+    revenue = 0
+    for order["total"] in orders:
+        revenue += order["total"]
+    return revenue
+
+    order_value = 0
+    for order["total"] in orders:
+        average_value += order["total"]
+    average_value = order_value / total_orders
+    return average_value
+
+    print(f"Total orders: {total_orders}")
+    print(f"Total revenue: {revenue}")
+    print(f"Average order value: {average_value}")
+
+# Call function on 'orders'
+summarize_orders(orders)
