@@ -7,7 +7,7 @@ public class Customer {
 	this.email = email;
     }
 
-    public void format(String name, String email) {
+    public void format() {
 	System.out.println("Customer Name: " + this.name + ", Email: " + this.email);
     }
     
